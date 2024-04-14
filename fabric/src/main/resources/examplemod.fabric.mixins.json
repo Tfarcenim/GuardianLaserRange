@@ -7,7 +7,7 @@
     "mixins": [
     ],
     "client": [
-        "MixinTitleScreen"
+      "guardianlaserrange.mixin.MixinTitleScreen"
     ],
     "server": [
     ],
