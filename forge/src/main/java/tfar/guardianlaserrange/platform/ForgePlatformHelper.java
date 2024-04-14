@@ -1,5 +1,6 @@
 package tfar.guardianlaserrange.platform;
 
+import tfar.guardianlaserrange.ModConfigForge;
 import tfar.guardianlaserrange.platform.services.IPlatformHelper;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
@@ -22,5 +23,10 @@ public class ForgePlatformHelper implements IPlatformHelper {
     public boolean isDevelopmentEnvironment() {
 
         return !FMLLoader.isProduction();
+    }
+
+    @Override
+    public double getMultiplier() {
+        return ModConfigForge.Server.multiplier.get();
     }
 }
