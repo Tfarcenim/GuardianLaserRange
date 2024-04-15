@@ -23,6 +23,6 @@ public class GuardianLaserRange {
     public static boolean checkRange(Guardian guardian, LivingEntity target) {
         double range = guardian.getAttributeValue(Attributes.FOLLOW_RANGE);
         double reducedRange = range * Services.PLATFORM.getMultiplier();
-        return !(guardian.distanceToSqr(target) > reducedRange * reducedRange);
+        return guardian.distanceToSqr(target) <= reducedRange * reducedRange;
     }
 }
